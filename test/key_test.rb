@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/key'
+require './lib/enigma'
 require 'pry'
 
 class KeyTest < Minitest::Test
@@ -16,6 +17,10 @@ class KeyTest < Minitest::Test
   end
 
   def test_the_given_key_stays_the_same
+    
+
+
+
     #right here i believe we need to make an enigma object
     #dont forget to require enigma file at the top if so
     #try to write tests and functionality for the key part
@@ -23,7 +28,7 @@ class KeyTest < Minitest::Test
     # make this pass so we don't override whatever they put in
     #will probably have to write seperate method for generating
     #a random key and calling it later
-    #dont forget we already solved this in enigma og 
+    #dont forget we already solved this in enigma og
     key = Key.new
   end
 
