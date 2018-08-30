@@ -1,5 +1,6 @@
 require 'date'
 require "./lib/key"
+require 'pry'
 
 class Enigma
 
@@ -8,15 +9,15 @@ class Enigma
               :message
 
   def initialize
-
+    # @key = Key.new
   end
 
-  def encrypt(message, key = Key.new.random, date = Date.today.strftime("%e%m%y"))
-    @key = key
+  def encrypt(message, key = Key.new.random_key, date = Date.today.strftime("%d%m%y"))
     @date = date
     @message = message
+    @key = key
   end
-
+  
   def slice_it
     require "pry"; binding.pry
     @message.each_slice(4) do |rotation_group|
@@ -24,8 +25,7 @@ class Enigma
     end
     # ["h", "e", "l", "l"], ["o"]
   end
-
-
+  
 end
 
 
