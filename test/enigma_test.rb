@@ -38,6 +38,7 @@ class EnigmaTest < Minitest::Test
     e = Enigma.new
     e.encrypt("this is so secret ..end..", "34567", 290818)
     assert_equal "34567", e.key
+
   end
 
   def test_it_will_seperate_the_message_into_four_characters

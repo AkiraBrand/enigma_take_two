@@ -8,14 +8,14 @@ class Enigma
               :date,
               :message
 
-  # def initialize
-  #   @key = Key.new
-  # end
+  def initialize
+    # @key = Key.new
+  end
 
   def encrypt(message, key = Key.new.random_key, date = Date.today.strftime("%d%m%y"))
     @date = date
     @message = message
-    # @key = Key.new(key)
+    @key = key
   end
 
 end
