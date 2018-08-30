@@ -12,11 +12,6 @@ class OffsetTest < Minitest::Test
     assert_instance_of Offset, offset
   end
 
-  def test_the_given_date_gets_squared
-    offset = Offset.new
-    assert_equal 84575109124, offset.date_squared
-  end
-
   def test_the_last_four_method
     offset = Offset.new
     assert_equal "9124", offset.last_four
